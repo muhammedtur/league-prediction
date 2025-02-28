@@ -142,7 +142,7 @@ class InsiderLeagueService implements LeagueServiceInterface
 
         $championshipPredictions = $this->calculateChampionshipOdds($currentWeek);
 
-        return ['message' => "Week {$nextWeek} simulated successfully.", 'games' => $simulatedGames, 'championship_predictions' => $championshipPredictions];
+        return ['message' => "Week {$nextWeek} simulated successfully.", 'games' => $simulatedGames, 'predictions' => $championshipPredictions];
     }
 
     public function simulateAllWeeks(): array
