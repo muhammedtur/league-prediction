@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LeagueController;
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::prefix('league/{league}')->group(function () {
+    Route::get('/', [LeagueController::class, 'showLeaguePage'])->name('league.showLeaguePage');
 });
